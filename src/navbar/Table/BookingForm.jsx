@@ -29,7 +29,7 @@ const BookingForm = () => {
     try {
       const response = await axios.post('https://backhend.vercel.app/api/book-table', formData);
       alert('Booking confirmed!');
-      navigate('/');
+      navigate('/vercel/');
     } catch (error) {
       alert('Error in booking: ' + error.message);
     }

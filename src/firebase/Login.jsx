@@ -44,7 +44,7 @@ const Login = () => {
     try {
       const result = await signInWithPopup(auth, provider);
       console.log(result);
-      navigate('/'); // Navigate only after successful login
+      navigate('/vercel/'); // Navigate only after successful login
     } catch (error) {
       console.error('Error logging in with Google', error.message);
     }
