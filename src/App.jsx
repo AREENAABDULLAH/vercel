@@ -1,27 +1,12 @@
-
-
-
-
-import { BrowserRouter } from 'react-router-dom'
-import AppRouter from './AppRoutes'
-
-
+import { BrowserRouter } from "react-router-dom";
+import AppRouter from "./AppRoutes";
 
 function App() {
-
-
   return (
-
-   <div>
-    
- 
-    <AppRouter/>
-   
- 
-   </div>
-
-   
-  )
+    <BrowserRouter>  {/* ✅ Ensure Router is Wrapping Everything */}
+      <AppRouter />
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
