@@ -1,0 +1,72 @@
+/* Container for both image and text */
+.responsive-container {
+    display: flex;               /* Flexbox layout */
+    justify-content: space-between; /* Space between image and text */
+    align-items: center;         /* Vertically align the image and text in the center */
+    padding: 20px;
+    gap: 20px;                   /* Gap between the left and right sides */
+    flex-wrap: wrap;             /* Allow wrapping on smaller screens */
+  }
+  
+  /* Left side styling (image container) */
+  .left-side {
+    flex: 1;                     /* Take up available space */
+    max-width: 500px;            /* Limit max width of the image */
+  }
+  
+  /* Image styling */
+  .responsive-image {
+    width: 100%;                 /* Ensure image is responsive */
+    height: auto;                /* Keep aspect ratio */
+    border-radius: 10px;         /* Optional, for rounded corners */
+  }
+  
+  /* Right side styling (text container) */
+  .right-side {
+    flex: 1;                     /* Take up available space */
+    text-align: left;            /* Align text to the left */
+  }
+  p{
+    color: black;
+    font-size: smaller;
+    font-weight: lighter;
+    font-family: serif;
+    margin-left: 12px;
+  }
+  .white{
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 30px;
+  }
+  .white:hover{
+    background-color: rgb(237, 238, 240);
+  }
+  /* Heading styling */
+  .right-side h1 {
+    font-size: 3rem;
+    color: #333;
+    margin: 12px;
+    font-weight: lighter;
+    font-family: serif;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media screen and (max-width: 768px) {
+    .responsive-container {
+      flex-direction: column;   /* Stack image and text vertically */
+      text-align: center;       /* Center text on small screens */
+    }
+  
+    .left-side,
+    .right-side {
+      flex: none;               /* Prevent sides from expanding */
+      width: 100%;               /* Make both sides take full width */
+      margin-bottom: 20px;       /* Add space between image and text */
+    }
+  
+    .right-side h1 {
+      font-size: 2rem;           /* Reduce font size on smaller screens */
+    }
+  }
+  

@@ -1,0 +1,450 @@
+/* Navbar.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  height: 70px;
+   /* Background color */
+   background-color: rgb(252, 252, 252);
+  /* Text color */
+}
+/* Default navbar styles */
+.navbar-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.nav-links {
+display: flex;
+list-style-type: none;
+}
+
+.nav-link {
+padding: 10px 20px;
+text-decoration: none;
+color: #333;
+}
+
+/* Mobile styles - hide links by default */
+.nav-links {
+display: none;
+}
+
+/* Show links when the mobile menu is open */
+.nav-links.open {
+display: block;
+position: absolute;
+top: 60px;
+right: 0;
+background-color: #fff;
+width: 100%;
+text-align: center;
+}
+
+.hamburger {
+display: block;
+font-size: 30px;
+cursor: pointer;
+padding: 10px;
+}
+
+/* Mobile styles for smaller screens */
+@media (max-width: 768px) {
+.navbar-container {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.nav-links {
+  display: none;
+  width: 100%;
+}
+
+.nav-links.open {
+  display: block;
+}
+}
+
+.logo-link{
+  display: flex;
+}
+.logo-link h2{
+margin-top: 20px;
+}
+.navbar-logo{
+  display: flex;
+  height: 30px;
+  font-size: small;
+}
+.btn {
+  padding: 15px 25px;
+  font-size: 1.2rem;
+  border: 2px solid;
+  border-radius: 50px; /* Rounded button */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logo-link h2{
+  display: flex;
+  font-size: medium;
+}
+.navbar-links {
+  display: flex;
+  align-items: center;
+}
+
+.login-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color:rgb(193, 42, 42); /* Button color */
+  color: white; /* Button text color */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover {
+  background-color: #AD343E; /* Button hover color */
+}
+.logo-link img{
+  height: 90px;
+  padding-top: 10px;
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    width: 100%;
+    display: none;
+    
+  }
+
+  .login-button {
+    width: 100%; /* Full width on smaller screens */
+    margin-top: 10px;
+  }
+}
+/* Container styles for responsive background */
+.containers {
+display: flex;
+justify-content: space-between;
+align-items: center;
+height: 100vh;
+background: url('bg.png') no-repeat center center ;
+background-size: cover;
+
+text-align: center;
+margin-top: 30px;
+}
+
+.contents {
+justify-content: space-between;
+align-items: center;
+text-align: center;
+color: black;
+display: inline;
+padding-left: 250px;
+padding: 30px;
+border-radius: 10px;
+width: 100%;
+
+
+}
+
+h1 {
+font-size: 2.9rem;
+margin-bottom: 10px;
+font-family:serif;
+
+}
+
+p {
+font-size: 1.2rem;
+margin-bottom: 20px;
+}
+
+/* Flex container for buttons */
+.button-container {
+display: flex;
+justify-content: center;
+gap: 10px;
+}
+
+/* Common button styles */
+
+
+/* Specific styles for the black-bordered button */
+.black-border {
+font-size: small;
+background-color:#AD343E;
+text-decoration: none;
+color: white;
+}
+
+.black-border:hover {
+background-color: #b30c00;
+color: white;
+}
+
+
+/* Specific styles for the white-bordered button */
+.white-border {
+border-color: black;
+font-size: small;
+background-color: transparent;
+color: black;
+}
+
+.white-border:hover {
+background-color: white;
+color: black;
+}
+
+/* Make buttons responsive */
+@media (max-width: 600px) {
+.contents {
+  width: 90%;
+}
+
+.btn {
+  padding: 12px 20px;
+  font-size: 1rem;
+}
+}
+/* Basic styling for navbar */
+.navbar {
+
+padding: 10px 40px;
+position: fixed;
+
+top: 0;
+width: 100%;
+z-index: 100;
+}
+
+.navbar-container {
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+
+align-items: center;
+}
+
+.logo img {
+width: 70px;
+}
+.logo-link{
+display: flex;
+text-decoration: none;
+color: black;
+font-size: medium;
+}
+.logo-link h2 em{
+margin-top: 20px;
+margin-left: 1px;
+}
+.nav-links {
+display: flex;
+gap: 50px;
+margin-left: 100px;
+}
+
+.nav-link {
+color:black;
+text-decoration: none;
+font-size: 1.1rem;
+transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+color: #ff7f50;
+}
+
+
+/* Hamburger menu */
+.menu-toggle {
+display: none;
+flex-direction: column;
+gap: 5px;
+cursor: pointer;
+}
+
+.bar {
+width: 30px;
+height: 3px;
+background-color: white;
+border-radius: 5px;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+.nav-links {
+ 
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.nav-links.active {
+  display: flex;
+}
+
+.menu-toggle {
+  display: flex;
+}
+
+.navbar-container {
+  justify-content: space-between;
+}
+.black{
+  margin-right: 200px;
+}
+}
+.black{
+text-decoration: none;
+}
+.black-border{
+font-size: small;
+background-color:#AD343E;
+text-decoration: none;
+color: white;
+border: none;
+border-radius: 40px;
+}
+.black-border Link{
+text-decoration: none;
+color: white;
+}
+
+.login-button{
+margin-left: 200px;
+border-radius: 20px;
+padding-left: 40px;
+padding-right: 40px;
+background-color:#AD343E;
+}
+.speacial{
+width: 300px;
+height: 100px;
+}
+
+
+/* ///updated */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  color: black;
+  padding: 10px 15px; /* Added padding for better spacing */
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Logo Styling */
+.logo {
+  font-size: 19px;
+  font-weight: bold;
+  display: flex;
+  align-items: center; /* Center the logo vertically */
+}
+
+.logo h4 {
+  padding-left: 10px; /* Added padding for spacing */
+  font-weight: lighter;
+  font-family: serif;
+}
+
+/* Hamburger Menu (Toggler) */
+.hamburger {
+  display: none; /* Hidden by default */
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.nav-links li {
+  cursor: pointer;
+  font-size: 20px;
+  font-family: serif;
+}
+
+.nav-links li:hover {
+  text-decoration: underline;
+}
+
+/* Contact Button */
+.contact-button {
+  background-color: #AD343E;
+  padding: 10px 24px; /* Combined padding for consistency */
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+.contact-button:hover {
+  background-color: #AD343E;
+}
+
+/* Responsive Design (for smaller screens) */
+@media screen and (max-width: 786px) {
+  .navbar-container {
+    justify-content: space-between; /* Ensure space between logo and hamburger */
+  }
+
+  .logo {
+    flex: 1; /* Allow logo to take available space */
+  }
+
+  .hamburger {
+    display: inline; /* Display the hamburger icon */
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    width: 100%;
+    display: none; /* Initially hide the navbar items */
+  }
+
+  .nav-links.open {
+    display: flex; /* Display navbar items when open */
+    background-color: white; /* Add background to navbar when open */
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  .contact-button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+
+ 
+

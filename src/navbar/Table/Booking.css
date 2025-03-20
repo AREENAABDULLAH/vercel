@@ -1,0 +1,105 @@
+
+.table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  max-width: 600px; /* Set a max width for larger screens */
+  margin: 0 auto; /* Center the form horizontally */
+  border-radius: 8px;
+
+}
+
+/* Styling for the form title */
+h2 {
+  font-size: 24px;
+  color: #AD343E;
+  margin-bottom: 20px;
+}
+
+/* Styling for buttons */
+.black-borders {
+  font-size: small;
+  background-color: #AD343E;
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  height: 50px;
+  width: 220px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.black-borders:hover {
+  background-color: #9a2b35;
+}
+
+/* Form input styling */
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 12px;
+  height: 30px;
+  outline: none;
+  margin-bottom: 2px;
+  box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #007bff;
+}
+
+/* Special requests textarea styling */
+.speacial {
+  min-height: 80px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .table {
+    padding: 15px;
+    width: 90%; /* Ensure form takes up 90% of the screen width */
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  input,
+  textarea,
+  .black-borders {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .table {
+    padding: 10px;
+    width: 100%; /* Ensure form takes full width */
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  input,
+  textarea,
+  .black-borders {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .black-borders {
+    width: 100%; /* Full width button on mobile */
+  }
+}

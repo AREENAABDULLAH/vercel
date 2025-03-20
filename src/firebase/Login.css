@@ -1,0 +1,99 @@
+/* Container for the login page */
+.logins {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    padding: 20px;
+  }
+ 
+  .logos {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .logos img {
+    margin-bottom: 10px;
+    height: 70px;
+    margin-left: 30px;
+  }
+  .email .password{
+width: 200px;
+height: 100px;
+
+  }
+  h3{
+    font-weight: lighter
+    ;
+    font-size: 30px;
+  }
+  /* Styling the login page heading */
+  h2 {
+    font-size: 36px;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+ .loginBtn{
+    width: 100%;
+    max-width: 200px;
+    display: flex;
+   margin-left: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    background-color: #c1351d;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+ }
+ 
+  /* Google login button styling */
+  .googleBtn {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+border: 1px solid black;
+    color: black;
+    font-size: 16px;
+ 
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+   
+  }
+  
+  .googleBtn:hover {
+    background-color: whitesmoke;
+  }
+  
+  .googleBtn img {
+    margin-right: 10px;
+    height: 20px;
+  }
+  
+ 
+  
+ 
+  
+  /* Styling the spacing for form and other components */
+  form {
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  

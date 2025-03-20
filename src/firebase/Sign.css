@@ -1,0 +1,134 @@
+/* General styles for the sign-up page */
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  
+    padding: 20px;
+  }
+  
+  .signup-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    margin-left: 100px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .signup-form img {
+    margin-bottom: 15px;
+    height: 80px;
+    padding-left: 70px;
+
+  }
+  
+  .signup-form h3 {
+    font-size: 26px;
+    font-weight: lighter;
+    color: #333;
+    padding-right: 100px;
+    
+  }
+  
+  .signup-form h2 {
+    font-size: 28px;
+    color: #c1351d;
+    margin-bottom: 25px;
+    margin-right: 100px;
+  }
+  
+  /* Form input fields */
+  .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .form-group label {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .form-group input {
+    width: 100%;
+
+    padding: 12px;
+    margin-top: 5px;
+    border: 1 px solid black;
+        font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Focus effect for input fields */
+  .form-group input:focus {
+    border-color: #007bff;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #c1351d;
+    color: white;
+    font-size: 13px;
+    border: none;
+
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #c1351d;
+  }
+  
+  /* Error message styling */
+  .error-message {
+    color: #c1351d;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  /* Link styling for login */
+  .signup-form p {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+  
+  .signup-form p a {
+    
+    text-decoration: none;
+  }
+  
+  .signup-form p a:hover {
+    text-decoration: underline;
+  }
+  input,textarea{
+    font-size: x-small;
+  }
+  /* Mobile responsiveness */
+  @media (max-width: 786px) {
+    .signup-container{
+       text-align: center;
+    }
+    .signup-form {
+      padding: 20px;
+      margin: 0 10px;
+      
+    }
+  
+    .signup-form h2 {
+      font-size: 24px;
+    }
+  
+    .form-group input {
+      font-size: 14px;
+    }
+  
+    .submit-btn {
+      font-size: 16px;
+    }
+  }
+  
