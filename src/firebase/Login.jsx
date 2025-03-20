@@ -24,7 +24,7 @@ const Login = () => {
 
       await signInWithEmailAndPassword(auth, email, password);
       window.alert("you are login sucessfully!")
-      navigate('/'); // Navigate only after successful login
+      navigate('/vercel'); // Navigate only after successful login
     } catch (error) {
       // Handle specific Firebase error messages
       if (error.code === 'auth/invalid-email') {
@@ -44,7 +44,7 @@ const Login = () => {
     try {
       const result = await signInWithPopup(auth, provider);
       console.log(result);
-      navigate('/vercel/'); // Navigate only after successful login
+      navigate('/vercel'); // Navigate only after successful login
     } catch (error) {
       console.error('Error logging in with Google', error.message);
     }

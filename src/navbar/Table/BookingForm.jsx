@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router-dom';
 
 const BookingForm = () => {
   const navigate = useNavigate();
-
   const [formData, setFormData] = useState({
     user_name: '',
     phone_number: '',
@@ -14,8 +13,10 @@ const BookingForm = () => {
     booking_time: '',
     num_people: '',
     special_requests: '',
-    restaurant_id: '1', // Assume this is the restaurant ID
+    restaurant_id: '1',
   });
+
+  const [confirmation, setConfirmation] = useState(null);
 
   const handleChange = (e) => {
     setFormData({
@@ -28,72 +29,29 @@ const BookingForm = () => {
     e.preventDefault();
     try {
       const response = await axios.post('https://backhend.vercel.app/api/book-table', formData);
-      alert('Booking confirmed!');
-      navigate('/vercel/');
+      setConfirmation(`✅ Booking confirmed for ${formData.num_people} people on ${formData.booking_date} at ${formData.booking_time}`);
     } catch (error) {
-      alert('Error in booking: ' + error.message);
+      setConfirmation('❌ Error in booking. Please try again.');
     }
   };
 
   return (
-    <div className='table'> 
+    <div className='table'>
       <div className='center'>
         <h2>Book a Table</h2>
         <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="user_name"
-            value={formData.user_name}
-            onChange={handleChange}
-            placeholder="Your Full Name"
-            required
-          /> <br /> <br />
-          <input
-            type="tel"
-            name="phone_number"
-            value={formData.phone_number}
-            onChange={handleChange}
-            placeholder="Your Phone Number"
-            required
-          /> <br /> <br />
-          <input
-            type="email"
-            name="email_address"
-            value={formData.email_address}
-            onChange={handleChange}
-            placeholder="Your Email Address"
-            required
-          /> <br /> <br />
-          <input
-            type="date"
-            name="booking_date"
-            value={formData.booking_date}
-            onChange={handleChange}
-            required
-          /> <br /> <br />
-          <input
-            type="time"
-            name="booking_time"
-            value={formData.booking_time}
-            onChange={handleChange}
-            required
-          /> <br /> <br />
-          <input
-            type="number"
-            name="num_people"
-            value={formData.num_people}
-            onChange={handleChange}
-            placeholder="Number of People"
-            required
-          /> <br /><br />
-          <textarea className='speacial'
-            name="special_requests"
-            value={formData.special_requests}
-            onChange={handleChange}
-            placeholder="Special Requests (optional)"
-          /><br /><br />
+          <input type="text" name="user_name" value={formData.user_name} onChange={handleChange} placeholder="Your Full Name" required /> <br /> <br />
+          <input type="tel" name="phone_number" value={formData.phone_number} onChange={handleChange} placeholder="Your Phone Number" required /> <br /> <br />
+          <input type="email" name="email_address" value={formData.email_address} onChange={handleChange} placeholder="Your Email Address" required /> <br /> <br />
+          <input type="date" name="booking_date" value={formData.booking_date} onChange={handleChange} required /> <br /> <br />
+          <input type="time" name="booking_time" value={formData.booking_time} onChange={handleChange} required /> <br /> <br />
+          <input type="number" name="num_people" value={formData.num_people} onChange={handleChange} placeholder="Number of People" required /> <br /><br />
+          <textarea className='special' name="special_requests" value={formData.special_requests} onChange={handleChange} placeholder="Special Requests (optional)" /><br /><br />
           <button type="submit" className='black-borders'>Confirm Booking</button>
         </form>
+
+        {/* Show confirmation message */}
+        {confirmation && <div className="confirmation-message">{confirmation}</div>}
       </div>
     </div>
   );
