@@ -20,7 +20,7 @@ const AppRouter=()=>{
 <Routes>
   
    
-<Route path='/' element={<Navbar/>}></Route>
+<Route path='/vercel' element={<Navbar/>}></Route>
  <Route path='/login' element={<Login/>}></Route>
 
  <Route path='/signup' element={<SignupPage/>}></Route>
